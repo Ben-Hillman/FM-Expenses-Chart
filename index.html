@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css"> 
+  <title>Frontend Mentor | Expenses Chart</title>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="balance">
+        <h1>My balance</h1>
+        <span>$921.48</span>
+      </div>
+      <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+    </div>
+    <div class="card-body">
+      <h2>Spending - Last 7 days</h2>
+      <div class="bar-graph">
+        <canvas id="myChart" height="200"></canvas>
+      </div>
+      <hr>
+      <div class="card-footer">
+        <div class="total">
+          <h3>Total this month</h3>
+          <span>$478.33</span>
+        </div>
+        <div class="compare">
+          <span>+2.4%</span>
+          <h3>from last month</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://ben-hillman.github.io/portfolio/" target="_blank">Ben Hillman</a>.
+  </div>
+
+  <script type="module" src="graph.js"></script>
+</body>
+</html>

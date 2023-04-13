@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Primary */
+
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    
+    /* Neutral */
+    
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+
+    min-height: 100vh;
+
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--Cream);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 375px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.card-header,
+.card-body {
+    display: flex;
+
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.card-header,
+.card-footer {
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1,
+h3 {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.card-body h2,
+.total span,
+.compare span {
+    color: var(--Dark-brown);
+}
+
+/* Card header */
+
+.card-header {
+    color: var(--Very-pale-orange);
+    background-color: var(--Soft-red);
+}
+
+.balance span,
+.total span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Card body */
+
+.card-body {
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: var(--Very-pale-orange);
+}
+
+.bar-graph {
+    width: 100%;
+}
+
+hr {
+    border-top: 2px solid var(--Cream);
+}
+
+/* Card footer */
+
+.card-footer {
+    display: flex;
+}
+
+.card-footer h3 {
+    color: var(--Medium-brown);
+}
+
+.card-footer span:nth-child(2) {
+    font-size: 1.875rem;
+}
+
+.compare {
+    text-align: end;
+}
+
+.compare span {
+    font-weight: 700;
+}
