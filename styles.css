@@ -99,7 +99,7 @@ h3 {
 }
 
 hr {
-    border-top: 2px solid var(--Cream);
+    border: 1px solid var(--Cream);
 }
 
 /* Card footer */
