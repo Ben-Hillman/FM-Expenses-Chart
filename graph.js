@@ -1,4 +1,4 @@
-import Chart, { LinearScale } from 'chart.js/auto'
+
 
 (async function() {
   const data = [
@@ -13,11 +13,9 @@ import Chart, { LinearScale } from 'chart.js/auto'
 
   // const maxAmount = Math.max(...data.map(row => row.amount));
   const today = new Date().toLocaleDateString('en-US', {weekday: 'short'}).toLowerCase();
+  const ctx = document.getElementById("myChart");
 
-
-  new Chart(
-    document.getElementById('myChart'),
-    {
+  new Chart(ctx, {
       type: 'bar',
       data: {
         labels: data.map(row => row.day),
@@ -34,13 +32,12 @@ import Chart, { LinearScale } from 'chart.js/auto'
               }
             },
             hoverBackgroundColor: function(context) {
-              const index = context.dataIndex;
-              const backgroundColor = context.dataset.backgroundColor[index];
-              if (backgroundColor === 'hsl(10, 79%, 65%)') {
-                return 'hsla(10, 79%, 65%, 0.7)';
+              const dayOfWeek = data[context.dataIndex].day.toLowerCase();
+              if (dayOfWeek === today) {
+                return 'hsl(186, 34%, 65%, 0.7)';
               } 
               else {
-                return 'hsla(186, 34%, 60%, 0.7)';
+                return 'hsl(10, 79%, 65%, 0.7)';
               }
             },
             borderSkipped: false,
